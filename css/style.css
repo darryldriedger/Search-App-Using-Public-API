@@ -10,6 +10,7 @@ body {
   font: 1em/1.5 'Roboto', sans-serif;
   color: #222;
   background: #f6f7f7;
+  /*background-size: cover;*/
   padding-top: 145px;
   padding-bottom: 3em;
   margin: 0;
@@ -198,15 +199,111 @@ button {
   position: absolute;
   width: 1px;
 }
+/* ==============================
+   vv Added CSS vv
+=================================*/
+
+.infoDiv{
+  font-size: 0.75em;
+  width: 100%;
+  z-index: 100;
+  position: relative;
+}
+.infoDiv-list {
+  width: 45%;
+  min-width: 300px;
+}
+#info-albumArt {
+    overflow: hidden;
+    border: 10px solid white;
+    width: 35%;
+    min-width: 300px;
+}
+/*#search-results::before {
+  content: url('../img/left_arrow.svg');
+}*/
+#arrow-svg svg {
+    fill: #b3b3b3;
+}
+.float{
+  float: left;
+  width: 100%;
+  margin: 15px;
+}
+.albumName {
+  color: #fff;
+}
+.album-year{
+  color: #fff;
+}
+/* #grey  {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  background: #545454;
+  min-height: 37%;
+  z-index: -1000;
+} */
+.grey  {
+  position: absolute;
+  top: -110px;
+  left: -20%;
+  width: 150%;
+  background: #545454;
+  height: 310px;
+  z-index: -1000;
+}
+ ul,
+ ol {
+  padding-left: 0;
+  margin-left: 0;
+  list-style-position: inside;
+ }
+ .bandName,
+  #search-results {
+  color: #b3b3b3;
+ }
+ .album-title:hover,
+ #search-results:hover {
+  color: #ff99aa;
+ } 
+ #search-results {
+  text-align: left;
+  font-size: 1em;
+ }
+ .bandName {
+  margin-top:0px;
+  text-align: left;
+ }
+ .albumName {
+  margin-bottom: 0px;
+ }
+ .tracks {
+  padding-top: 30px;
+ }
+.bold {
+  font-weight: bold;
+}
+/* ==============================
+   ^^ Added CSS ^^
+=================================*/
 
 /* =================================
   Media Queries
 ==================================== */
 
-@media (min-width: 0) and (max-width: 549px) {
+@media (min-width: 0) and (max-width: 780px) {
   .album-list li {
     text-align: center;
   }
+  .albumName {
+  color: #b3b3b3;
+}
+.album-year{
+  color: #b3b3b3;
+}
+
 }
 
 @media (min-width: 550px) {
@@ -239,10 +336,6 @@ button {
     transform: scale(1.1);
   }
 
- .album-title {
-    padding-right: 1.25em;
- }
-
 }
 
 @media (min-width: 769px) {
@@ -263,6 +356,10 @@ button {
   .album-list li {
     width: 33.333333333%;
   }
+  .float{
+  float: left;
+  width: 45%;
+}
 }
 
 @media (min-width: 769px) and (max-width: 999px) {
